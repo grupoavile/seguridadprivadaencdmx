@@ -1,0 +1,720 @@
+:root {
+	--color1: #042544;
+	--color2: #a4ce4e;
+	--color3: #007abc;
+	--fondo: #f2f2f2;
+	--titulos: 33px;
+	--margenes: 60px;
+	--espacios: 10px;
+	--espacios-contenido: 45px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Aldrich", sans-serif;
+	background: var(--fondo);
+}
+
+img {
+	vertical-align: top;
+}
+
+/* Header */
+
+header {
+	width: 100%;
+	height: 650px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(../img/guardia_radio_.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+nav {
+	width: 100%;
+	position: fixed;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav1 {
+	background: transparent;
+	height: 120px;
+	/* ALTO del contenedor navegador*/
+	color: #fff;
+}
+
+.nav2 {
+	background: rgb(21, 60, 115);
+	height: 150px;
+	/* ALTO del contenedor navegador*/
+	color: #fff;
+	z-index: 1;
+	/* con esto hacemos que el navegador se sobre ponga */
+}
+
+.contenedor-nav {
+	display: flex;
+	margin: auto;
+	width: 90%;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1250px;
+	/* ancho del contenedor navegador*/
+	height: inherit;
+	overflow: hidden;
+}
+
+nav .enlaces a {
+	display: inline-block;
+	padding: 5px 0;
+	margin-right: 17px;
+	font-size: 25px;
+	font-weight: 300;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	color: inherit;
+}
+
+nav .enlaces a:hover {
+	border-bottom: 3px solid var(--color2);
+	transition: 0.6s;
+	color: var(--color2);
+}
+
+.logo,
+.logo img {
+	height: 100%;
+}
+
+/* original 100px */
+
+.icono {
+	display: none;
+	font-size: 50px;
+	/* TA,MAÑO DEL MENU HAMBUEGYESA */
+	padding: 23.5px 20px;
+}
+
+.textos {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 150px;
+}
+
+.textos>h1 {
+	font-size: 80px;
+}
+
+.textos>h2 {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+/* Main */
+
+.contenedor {
+	margin: auto;
+	padding: var(--margenes) 0;
+	width: 90%;
+	max-width: 1500px;
+	/* ancho del contenedor general*/
+	text-align: center;
+	overflow: hidden;
+}
+
+.contenedor h3 {
+	font-size: var(--titulos);
+	color: var(--color1);
+	margin-bottom: var(--espacios);
+}
+
+.contenedor p {
+	font-size: var(--subtitulos);
+	font-weight: 300;
+	color: var(--color1);
+}
+
+.after::after {
+	content: "";
+	display: block;
+	margin: auto;
+	margin-top: var(--espacios);
+	width: 500px;
+	height: 10px;
+	background: var(--color2);
+	margin-bottom: var(--espacios-contenido);
+}
+
+.card {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.content-card {
+	width: 23%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	height: 400px;
+}
+
+.people {
+	height: 80%;
+}
+
+.content-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.texto-team {
+	height: 20%;
+	width: 100%;
+	padding: var(--espacios) 0;
+	color: var(--color1);
+	font-size: 20px;
+}
+
+.about {
+	/* background: ima(img/teclado.jpg); */
+	background-color: rgb(9, 176, 223);
+	height: auto;
+}
+
+.servicios {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	color: #fff;
+	justify-content: space-between;
+	margin: auto;
+	flex-wrap: wrap;
+}
+
+.caja-servicios {
+	width: 33%;
+	height: 350px;
+	max-width: 270px;
+	margin: auto;
+	text-align: center;
+	background-image: url(../img/Logo_solido_final_1.png);
+}
+
+.caja-servicios>h4 {
+	margin-bottom: var(--espacios);
+}
+
+.caja-servicios>p {
+	text-align: center;
+	color: #fff;
+}
+
+.botones-work {
+	overflow: hidden;
+}
+
+.botones-work li {
+	display: inline-block;
+	text-align: center;
+	margin-left: var(--espacios);
+	margin-bottom: var(--espacios-contenido);
+	padding: 6px 12px;
+	border: 1px solid var(--color1);
+	list-style: none;
+	color: var(--color1);
+}
+
+.botones-work li:hover {
+	background: var(--color1);
+	color: #fff;
+	cursor: pointer;
+}
+
+.botones-work .active {
+	background: var(--color1);
+	color: #fff;
+}
+
+.galeria-work {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cont-work {
+	width: 31%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+	height: 300px;
+	overflow: hidden;
+	margin-bottom: var(--espacios-contenido);
+}
+
+.img-work {
+	height: 90%;
+	width: 100%;
+}
+
+.img-work img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.textos-work {
+	height: 10%;
+}
+
+.textos-work h4 {
+	line-height: 30px;
+	font-weight: 300;
+}
+
+/* Footer */
+
+/* footer{background:url(img/teclado.jpg);} */
+
+.marca-logo {
+	width: 40%;
+	margin: auto;
+	margin-bottom: var(--espacios);
+}
+
+.marca-logo img {
+	width: 75%;
+}
+
+.iconos {
+	display: flex;
+	margin: auto;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.fab {
+	font-size: 60px;
+	color: #fff;
+	margin-bottom: var(--espacios);
+	display: inline-block;
+}
+
+footer p {
+	margin-top: var(--espacios);
+}
+
+@media screen and (max-width: 700px) {
+	.nav2 {
+		color: #fff;
+	}
+
+	.icono {
+		display: block;
+		cursor: pointer;
+	}
+
+	.enlaces {
+		position: fixed;
+		top: 80px;
+		background: #0061a0;
+		left: 0;
+		height: 100%;
+		transition: 1s;
+		width: 0;
+		overflow: hidden;
+	}
+
+	.enlaces a {
+		display: block;
+		width: 100%;
+		height: 50px;
+		padding: 20px;
+		text-align: center;
+		background: #34495e;
+		color: #fff;
+	}
+
+	.textos>h1 {
+		font-size: 40px;
+	}
+
+	.textos>h2 {
+		font-size: 20px;
+	}
+
+	.content-card {
+		width: 48%;
+		margin-bottom: var(--margenes);
+	}
+
+	:root {
+		--margenes: 30px;
+	}
+
+	.row2 {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	:root {
+		--espacios-contenido: 25px;
+	}
+
+	.content-card {
+		width: 90%;
+	}
+
+	.caja-servicios {
+		width: 95%;
+		margin-bottom: var(--margenes);
+	}
+
+	.cont-work {
+		width: 95%;
+	}
+
+	.marca-logo {
+		width: 80%;
+	}
+
+	.iconos {
+		margin: auto;
+	}
+}
+
+footer {
+	width: 100%;
+	color: white;
+}
+
+.container-footer-all {
+	background: rgb(0, 166, 213);
+	width: 100%;
+	max-width: 1720px;
+	margin: auto;
+	padding: 40px;
+}
+
+.container-body {
+	background: rgb(0, 166, 213);
+	display: flex;
+	justify-content: space-between;
+}
+
+.colum1 {
+	max-width: 550px;
+}
+
+.colum1 h1 {
+	font-size: 22px;
+}
+
+.colum1 p {
+	font-size: 14px;
+	color: #c7c7c7;
+	margin-top: 20px;
+}
+
+.colum2 {
+	max-width: 300px;
+}
+
+.colum2 h1 {
+	font-size: 22px;
+}
+
+.row {
+	margin-top: 20px;
+	display: flex;
+}
+
+.row img {
+	width: 36px;
+	height: 36px;
+}
+
+.row label {
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #c7c7c7;
+}
+
+.colum3 {
+	max-width: 550px;
+}
+
+.colum3 h1 {
+	font-size: 22px;
+}
+
+.row2 {
+	margin-top: 20px;
+	display: flex;
+}
+
+.row2 img {
+	width: 36px;
+	height: 36px;
+}
+
+.row2 label {
+	margin-top: 10px;
+	margin-left: 20px;
+	max-width: 140px;
+}
+
+.container-footer {
+	width: 100%;
+	background: #101010;
+}
+
+.footer {
+	background: rgb(21, 60, 115);
+	max-width: 1720 px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.copyright {
+	color: #c7c7c7;
+}
+
+.copyright a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.information a {
+	text-decoration: none;
+	color: #c7c7c7;
+}
+
+/* reglas CSS para formulario */
+.form-consulta {
+	max-width: 500px;
+	background: rgb(21, 60, 115);
+	padding: 25px;
+	font-family: Aldrich, "Source Sans Pro", sans-serif;
+}
+
+.campo-form {
+	width: 100%;
+	height: 36px;
+	margin: 2px 0 6px;
+	padding-left: 6px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: 0;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 1em;
+}
+
+label span {
+	color: #f00;
+}
+
+textarea {
+	min-height: 100px !important;
+	max-width: 450px;
+	min-width: 100px;
+	max-height: 100px;
+}
+
+.btn-form {
+	display: inline-block;
+	border: 0;
+	background: rgb(14, 139, 211);
+	height: 46px;
+	line-height: 46px;
+	padding: 0 20px;
+	border-radius: 6px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.btn-form:hover {
+	background: #444;
+}
+
+/* reglas CSS para formulario */
+
+@media screen and (max-width: 1100px) {
+	.container-body {
+		flex-wrap: wrap;
+	}
+
+	.colum1 {
+		max-width: 100%;
+	}
+
+	.colum2,
+	.colum3 {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.after {
+		flex-wrap: wrap;
+	}
+
+	.colum1 {
+		max-width: 100%;
+	}
+
+	.colum2,
+	.colum3 {
+		margin-top: 40px;
+	}
+}
+
+/*whattsApp */
+
+.whatsapp {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #25d366;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	z-index: 100;
+}
+
+.whatsapp-icon {
+	margin-top: 13px;
+}
+
+/* boton custodias */
+
+.boton_custodias {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 15px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: rgb(21, 60, 115);
+	border-color: #d8d8d8;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 35px;
+}
+
+/* boton custodias */
+.banner {
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	background-image: radial-gradient(circle,
+			#00acff,
+			#188edb,
+			#1d72b7,
+			#1a5795,
+			#133e73);
+	color: rgb(21, 60, 115);
+}
+
+.btn-bgstroke {
+	font-size: 20px;
+	display: inline-block;
+	border: 1px solid white;
+	padding: 10px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: 300;
+	margin-top: 30px;
+	color: azure;
+}
+
+.btn-bgstroke:hover {
+	background-color: white;
+	color: #33cccc;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	background-image: url(../img/prom_sep_seg.jpg);
+	background-size: 600px 800px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalDialog>div {
+	width: 150px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	color: #133e73;
+}
+
+.close {
+	background: #606061;
+	color: #ffffff;
+	line-height: 35px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 34px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #00d9ff;
+}
